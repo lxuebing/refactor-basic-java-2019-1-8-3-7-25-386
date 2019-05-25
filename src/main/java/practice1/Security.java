@@ -27,10 +27,12 @@ public class Security {
 
         if (securityChecker.isAdmin()) {
             isAccess = true;
+            return isAccess;
         }
 
         if (this.securityChecker.checkPermission(user, permission) || permissions.contains(permission)) {
             isAccess = true;
+            return isAccess;
         }
 
         return isAccess;
